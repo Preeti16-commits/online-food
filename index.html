@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Panipat favours</title>
     <style>
         *{
-            font-family: "Dancing Script", cursive;
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-size: large;
+            font-style: normal;
+            color: white;
+            text-decoration: none;
         }
         body{
             margin:0px;
             overflow:auto;
             scroll-behavior: smooth; 
+            text-shadow:4px 1px 5px rgb(103, 103, 103, 0.9);
         }
         input{
             border-radius:80px;
@@ -59,18 +62,17 @@
             margin:auto;
             border-radius: 15px;  
         }
-        div{
-            text-align: center;
-        }
         .slides p{
             font-size: 18px;
             font-weight: 600;
             letter-spacing: 0.5px;
+            text-shadow:4px 1px 5px rgb(103, 103, 103, 0.9);
         }
         .slides{
             transition: transform 0.3s;
             border-radius: 10px;
             padding:15px;
+            text-align: center;
         }
         .slides:hover{
             transform: scale(1.08) rotate(-2deg);
@@ -131,11 +133,43 @@
         .slides:nth-child(even){
             background: linear-gradient(to bottom right, #ffefc5, #ffdca1);
         }
-        button{
-            background:transparent;
-            border:none;
-            font-size: 20px;
-            cursor:pointer;
+        .rest{
+            background:linear-gradient(to bottom right , #e0c28e, #ffefc5, #e0c28e);
+            padding:20px 10px;
+            border-radius: 10px;
+            height:200px;
+            text-align: center;
+            transition: transform 0.2s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .imgforres{
+            border-radius: 10px;
+            overflow: hidden;
+            width:250px;
+            height:150px;
+        }
+        .imgforres img{
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+        }
+        #container{
+            display:grid;
+            gap:60px;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(5, 200px); 
+            padding:50px;
+            overflow: auto;
+        }
+        .rest:hover{
+            transform: scale(0.95);
+            background:linear-gradient(to bottom right , #ffefc5, #e0c28e, #ffefc5);
+            box-shadow:7px 7px 50px rgba(255, 187, 0, 0.3),
+                       -7px -7px 50px rgba(255, 187, 0, 0.3);
         }
     </style>
 </head>
@@ -143,7 +177,6 @@
     <nav>
         <img src="logo.png" width="100px" height="100px">
         <input type="text" placeholder="Enter your favour">
-        <button>🔍</button>
     </nav><br>
     <section class="section">
         <div class="slides">
@@ -186,8 +219,99 @@
     <section id="section2">
         <img id="forlowerimage" src="manchurian.jpg" width="100%">
         <img id="forupperimage" src="at 39.png" width="100%">
+    </section><br>
+    <h1 style="color:#e0c28e; text-shadow: none;font-size: 50px; text-align: center;">OUR TOP RESTAURANT-</h1>
+    <section id="container">
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297683-d1190049-Reviews-Deepee_Restaurant-Agra_Agra_District_Uttar_Pradesh.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="uttarpradesh.png">
+            </div>
+            <p>DEEPEE RESTAURANT, Agra - 1 Gwalior Rd</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297592-d2430490-Reviews-17_Degrees_Patna-Patna_Patna_District_Bihar.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="patna.png">
+            </div>
+            <p>17 Degrees, Patna</p>
+        </section></a>
+        <a href="https://www.indianexcursions.co/restaurants-rajasthan/" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="rajasthan.png">
+            </div>
+            <p>Vaidehi Food Plaza, ,Udaipur-rajasthan</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297661-d1631441-Reviews-Golden_Bird-Bhubaneswar_Khurda_District_Odisha.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="odisha.png">
+            </div>
+            <p>GOLDEN BIRD, Bhubaneswar</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297584-d26793962-Reviews-KAI_Lounge-Port_Blair_South_Andaman_Island_Andaman_and_Nicobar_Islands.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="andaman.png">
+            </div>
+            <p> KAI Lounge, Andaman and Nicobar</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g659796-d23820149-Reviews-The_Rooftop-Gangtok_East_Sikkim_Sikkim.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="sikkim.png">
+            </div>
+            <p>THE ROOFTOP, Gangtok - Restaurant</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g679053-d21390105-Reviews-ALhito_Cafe_Resort-Almora_Almora_District_Uttarakhand.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="uttra.png">
+            </div>
+            <p>ALhito Cafe, Almora</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297618-d23552512-Reviews-Ruthay_Bagad-Manali_Kullu_District_Himachal_Pradesh.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="himachal.png">
+            </div>
+            <p>Ruthay Bagad, Manali</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297620-d17721336-Reviews-Mosaic_Restaurant-Jammu_City_Jammu_District_Jammu_Jammu_and_Kashmir.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="kashmir.jpg">
+            </div>
+            <p>Mosaic Restaurant, jammu</p>
+        </section></a>
+        <a href="https://www.thefork.com/restaurant/gujrat-spice-restaurant-r826716" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="gujrat.jpg">
+            </div>
+            <p>Gujrat Spice Restaurant</p>
+        </section></a>
+        <a href="https://www.thegranddragonladakh.com/dining.php" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="ladakh.png">
+            </div>
+            <p>The Grand Dragon Ladakh</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g816969-d1946644-Reviews-Simrose_Restaurant-Agonda_South_Goa_District_Goa.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="goa.png">
+            </div>
+            <p>Simrose Restaurant-Goa</p>
+        </section></a>
+        <a href="https://www.justdial.com/Bangalore/The-Rooftop-Restaurant-Koramangala/080PXX80-XX80-180630210414-E7S3_BZDET" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="karnataka.png">
+            </div>
+            <p>The Rooftop Restaurant- Bangalore</p>
+        </section></a>
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297635-d1205738-Reviews-Paragon_Restaurant_Calicut-Kozhikode_Kozhikode_District_Kerala.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="kerela.png">
+            </div>
+            <p>Paragon, Kozhikode- kerala</p>
+        </section></a>
+        <a href="https://www.chokhapunjab.com/blogs/dhaba-near-me-savoring-authentic-punjabi-delights-at-chokha-punjab" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="punjab.png">
+            </div>
+            <p>Savoring Authentic Punjabi Delights</p>
+        </section></a>
     </section>
 </body>
 </html>
-
-
