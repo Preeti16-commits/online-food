@@ -57,7 +57,7 @@
             padding: 20px;
             background: linear-gradient(to right, #fff7e6, #ffe2b6);
             margin:auto;
-            border-radius: 15px;     
+            border-radius: 15px;  
         }
         div{
             text-align: center;
@@ -71,11 +71,13 @@
             transition: transform 0.3s;
             border-radius: 10px;
             padding:15px;
-            background: white;
         }
         .slides:hover{
-            transform: scale(1.08);
+            transform: scale(1.08) rotate(-2deg);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slides img:hover{
+            transform: scale(1.15);
         }
         .section::-webkit-scrollbar {
             height: 0px;
@@ -89,7 +91,7 @@
             position:relative;
             height: 400px;
         }
-       #forlowerimage, #forupperimage {
+        #forlowerimage, #forupperimage {
             position: absolute;
             top: 0;
             left: 0; 
@@ -97,28 +99,28 @@
             height: 100%;
             object-fit: cover; 
             transition: transform 0.4s ease;
-       }
-       #forlowerimage{
-        z-index: 1;
-       }
-       #forupperimage{
-        z-index: 2;
-       }
-       #section2:hover #forlowerimage{
-        transform:scale(1.05);
-       }
-       #section2:hover #forupperimage{
-        transform:scale(1.03);
-        opacity: 0.7;
-       }
-       @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-            input {
-                width: 100%;
-                margin: 10px 0;
-            }
+        }
+        #forlowerimage{
+            z-index: 1;
+        }
+        #forupperimage{
+            z-index: 2;
+        }
+        #section2:hover #forlowerimage{
+            transform:scale(1.05);
+        }
+        #section2:hover #forupperimage{
+            transform:scale(1.03);
+            opacity: 0.7;
+        }
+        @media (max-width: 600px) {
+                nav {
+                    flex-direction: column;
+                }
+                input {
+                    width: 100%;
+                    margin: 10px 0;
+                }
         }
         .slides:nth-child(odd){
             background: linear-gradient(to bottom right , #fff3cd, #ffe5b4);
