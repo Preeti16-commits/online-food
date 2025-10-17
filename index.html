@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <title>Panipat favours</title>
     <style>
+        *{
+            font-family: "Dancing Script", cursive;
+            font-size: 18px;
+            font-weight: bold;
+            }
         body{
             margin:0px;
             overflow:auto;
@@ -29,35 +37,44 @@
             background-color: rgb(250, 250, 250);
         }
         nav{
-            padding:20px;
-            box-shadow:0px 2px 5px rgba(90, 90, 90, 0.7);
+            padding: 20px;
+            box-shadow:0px 2px 5px rgba(90, 90, 90, 0.4);
             background: linear-gradient(to right, #fee2c4, #ffcf8b );
             display:flex;
             height:40px;
             align-items: center;  
+            justify-content: space-between;
         }
         .section{
             display: flex;
-            gap: 60px; 
+            gap: 50px; 
             overflow:auto;
             scroll-behavior: smooth; 
-            padding: 10px;
+            padding: 20px;
             background-color:rgb(241, 239, 228);
-            margin:0px 20px;
+            margin:auto;
             border-radius: 15px;     
         }
         div{
             text-align: center;
         }
-        img{
-            transition: transform 0.2s ease;
+        .slides p{
+            color: #444;;
+
         }
-        .img:hover{
-            transform: scale(1.15);
+        .slides{
+            transition: transform 0.3s;
+            border-radius: 10px;
+            padding:15px;
+            background: white;
+        }
+        .slides:hover{
+            transform: scale(1.08);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /* background: white; */
         }
         .section::-webkit-scrollbar {
             height: 0px;
-            background: #ffe2b6;
         }
         
         body::-webkit-scrollbar {
@@ -86,6 +103,20 @@
        #section2:hover #forlowerimage{
         transform:scale(1.05);
        }
+       #section2:hover #forupperimage{
+        transform:scale(1.03);
+        opacity: 0.7;
+       }
+       @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            input {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -94,39 +125,39 @@
         <input type="text" placeholder="Enter your favour">
     </nav><br>
     <section class="section">
-        <div>
+        <div class="slides">
             <img class="img" src="samosa.png" height="100px">
             <p>Indian</p>
         </div>
-        <div>
+        <div class="slides">
             <img class="img" src="chaumin.png" height="100px">
             <p>chinese</p>
         </div>
-        <div id="desi">
+        <div class="slides">
             <img class="img" src="desi.png" height="100px">
             <p>Platter</p>
         </div>
-        <div>
+        <div class="slides">
             <img class="img" src="soup.png" height="100px">
             <p>Soup</p>
         </div>
-        <div>
+        <div class="slides">
            <img class="img" src="drink.png" height="100px">
             <p>soft drinks</p> 
         </div>
-        <div>
+        <div class="slides">
             <img class="img" src="pizza.png" height="100px">
             <p>Pizza</p>  
         </div>
-        <div>
+        <div class="slides">
             <img class="img" src="snack.png" height="100px">
             <p>Snacks</p>  
         </div>
-        <div>
+        <div class="slides">
            <img class="img" src="desert.png" height="100px">
             <p>Deserts</p>  
         </div>
-        <div>
+        <div class="slides">
           <img class="img" src="combo.png" height="100px">
             <p>Combo</p>  
         </div>  
@@ -135,4 +166,5 @@
         <img id="forlowerimage" src="manchurian.jpg" width="100%">
         <img id="forupperimage" src="at 39.png" width="100%">
     </section>
+</body>
 </html>
