@@ -138,7 +138,7 @@
             background:linear-gradient(to bottom right , #e0c28e, #ffefc5, #e0c28e);
             border-radius: 10px;
             height:300px;
-            width:250px;
+            width:249px;
             text-align: center;
             transition: transform 0.2s;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -148,21 +148,23 @@
             justify-content: center;
         }
         .imgforres{
-            border-radius: 10px;
             overflow: hidden;
             width:248px;
             height:250px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .imgforres img{
             width: 100%;
             height:100%;
             object-fit: cover;
         }
-        #container{
-            display:grid;
-            gap:20px;
-            grid-template-columns: repeat(5, 1fr); 
-            grid-template-rows: repeat(4, 330px); 
+        .imgforres:hover{
+            opacity: 0.9;
+        }
+        .container{
+            display:flex;
+            gap:30px;
             padding:40px;
             overflow: auto;
         }
@@ -172,13 +174,9 @@
             box-shadow:1px 1px 50px rgba(255, 187, 0, 0.3),
                        -1px -1px 50px rgba(255, 187, 0, 0.3);
         }
-        #container::-webkit-scrollbar{
+        .container::-webkit-scrollbar{
             height:0px;
         }
-        @media (max-width: 1024px) { #container { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 768px) { #container { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 480px) { #container { grid-template-columns: 1fr; } }
-
     </style>
 </head>
 <body>
@@ -228,115 +226,47 @@
         <img id="forlowerimage" src="manchurian.jpg" width="100%">
         <img id="forupperimage" src="at 39.png" width="100%">
     </section><br>
-    <h1 style="color:#e0c28e;text-shadow: none;font-size: 50px; text-align: center;">OUR TOP RESTAURANT-</h1>
-    <section id="container">
+    <h1 style="color:#e0c28e;text-shadow: none;font-size: 50px; text-align: center;">- OUR TOP RESTAURANT -</h1>
+    <section class="container">
         <a href="https://www.tripadvisor.in/Restaurant_Review-g297683-d1190049-Reviews-Deepee_Restaurant-Agra_Agra_District_Uttar_Pradesh.html" target="_blank"><section class="rest">
             <div class="imgforres">
                 <img src="uttarpradesh.png">
             </div>
             <p>Deepee Restaurant,UP</p>
         </section></a>
+
         <a href="https://www.tripadvisor.in/Restaurant_Review-g297592-d2430490-Reviews-17_Degrees_Patna-Patna_Patna_District_Bihar.html" target="_blank"><section class="rest">
             <div class="imgforres">
                 <img src="patna.png">
             </div>
             <p>17 Degrees, Patna</p>
         </section></a>
+    
         <a href="https://www.indianexcursions.co/restaurants-rajasthan/" target="_blank"><section class="rest">
             <div class="imgforres">
                 <img src="rajasthan.png">
             </div>
             <p>Vaidehi Food Plaza,rajasthan</p>
         </section></a>
+
         <a href="https://www.tripadvisor.in/Restaurant_Review-g297661-d1631441-Reviews-Golden_Bird-Bhubaneswar_Khurda_District_Odisha.html" target="_blank"><section class="rest">
             <div class="imgforres">
                 <img src="odisha.png">
             </div>
             <p>GOLDEN BIRD, Bhubaneswar</p>
         </section></a>
+    
         <a href="https://www.tripadvisor.in/Restaurant_Review-g297584-d26793962-Reviews-KAI_Lounge-Port_Blair_South_Andaman_Island_Andaman_and_Nicobar_Islands.html" target="_blank"><section class="rest">
             <div class="imgforres">
                 <img src="andaman.png">
             </div>
             <p> KAI Lounge, Andaman and Nicobar</p>
         </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g659796-d23820149-Reviews-The_Rooftop-Gangtok_East_Sikkim_Sikkim.html" target="_blank"><section class="rest">
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g304554-d3163674-Reviews-Jyran_Tandoor_Dining_Lounge-Mumbai_Maharashtra.html" target="_blank"><section class="rest">
             <div class="imgforres">
-                <img src="sikkim.png">
+                <img src="mumbai.jpg">
             </div>
-            <p>The Rooftop, Gangtok</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g679053-d21390105-Reviews-ALhito_Cafe_Resort-Almora_Almora_District_Uttarakhand.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="uttra.png">
-            </div>
-            <p>ALhito Cafe, Almora</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g297618-d23552512-Reviews-Ruthay_Bagad-Manali_Kullu_District_Himachal_Pradesh.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="himachal.png">
-            </div>
-            <p>Ruthay Bagad, Manali</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g297620-d17721336-Reviews-Mosaic_Restaurant-Jammu_City_Jammu_District_Jammu_Jammu_and_Kashmir.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="kashmir.jpg">
-            </div>
-            <p>Mosaic Restaurant, jammu</p>
-        </section></a>
-        <a href="https://www.thefork.com/restaurant/gujrat-spice-restaurant-r826716" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="gujrat.jpg">
-            </div>
-            <p>Gujrat Spice Restaurant</p>
-        </section></a>
-        <a href="https://www.thegranddragonladakh.com/dining.php" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="ladakh.png">
-            </div>
-            <p>The Grand Dragon Ladakh</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g816969-d1946644-Reviews-Simrose_Restaurant-Agonda_South_Goa_District_Goa.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="goa.png">
-            </div>
-            <p>Simrose Restaurant-Goa</p>
-        </section></a>
-        <a href="https://www.justdial.com/Bangalore/The-Rooftop-Restaurant-Koramangala/080PXX80-XX80-180630210414-E7S3_BZDET" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="karnataka.png">
-            </div>
-            <p>The Rooftop Restaurant- Bangalore</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g297635-d1205738-Reviews-Paragon_Restaurant_Calicut-Kozhikode_Kozhikode_District_Kerala.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="kerela.png">
-            </div>
-            <p>Paragon, Kozhikode- kerala</p>
-        </section></a>
-        <a href="https://www.chokhapunjab.com/blogs/dhaba-near-me-savoring-authentic-punjabi-delights-at-chokha-punjab" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="punjab.png">
-            </div>
-            <p>Savoring Authentic Punjabi Delights</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g303876-d9459019-Reviews-TFL-Vijayawada_Krishna_District_Andhra_Pradesh.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="andhra.jpg">
-            </div>
-            <p>TFL,Vijayawada</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g659792-d1991496-Reviews-Le_Dupleix_Restaurant-Pondicherry_Union_Territory_of_Pondicherry.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="pondi.jpg">
-            </div>
-            <p>Le Dupleix, Pondicherry</p>
-        </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g503702-d27970289-Reviews-Flare_Restaurant-Shillong_East_Khasi_Hills_District_Meghalaya.html" target="_blank"><section class="rest">
-            <div class="imgforres">
-                <img src="megh.jpg">
-            </div>
-            <p>Flare, Shilong</p>
+            <p>Jyran - Tandoor Dining & Lounge, Mumbai</p>
         </section></a>
         <a href="https://www.tripadvisor.in/Restaurant_Review-g304551-d13128242-Reviews-Kheer_at_Roseate_House-New_Delhi_National_Capital_Territory_of_Delhi.html" target="_blank"><section class="rest">
             <div class="imgforres">
@@ -344,11 +274,105 @@
             </div>
             <p>Kheer at Roseate House, New Delhi</p>
         </section></a>
-        <a href="https://www.tripadvisor.in/Restaurant_Review-g304554-d3163674-Reviews-Jyran_Tandoor_Dining_Lounge-Mumbai_Maharashtra.html" target="_blank"><section class="rest">
+    </section>
+    <section class="container">
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g659792-d1991496-Reviews-Le_Dupleix_Restaurant-Pondicherry_Union_Territory_of_Pondicherry.html" target="_blank"><section class="rest">
             <div class="imgforres">
-                <img src="mumbai.jpg">
+                <img src="pondi.jpg">
             </div>
-            <p>Jyran - Tandoor Dining & Lounge, Mumbai</p>
+            <p>Le Dupleix, Pondicherry</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g503702-d27970289-Reviews-Flare_Restaurant-Shillong_East_Khasi_Hills_District_Meghalaya.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="megh.jpg">
+            </div>
+            <p>Flare, Shilong</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g659796-d23820149-Reviews-The_Rooftop-Gangtok_East_Sikkim_Sikkim.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="sikkim.png">
+            </div>
+            <p>The Rooftop, Gangtok</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g679053-d21390105-Reviews-ALhito_Cafe_Resort-Almora_Almora_District_Uttarakhand.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="uttra.png">
+            </div>
+            <p>ALhito Cafe, Almora</p>
+        </section></a>
+    
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297618-d23552512-Reviews-Ruthay_Bagad-Manali_Kullu_District_Himachal_Pradesh.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="himachal.png">
+            </div>
+            <p>Ruthay Bagad, Manali</p>
+        </section></a>
+    
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297620-d17721336-Reviews-Mosaic_Restaurant-Jammu_City_Jammu_District_Jammu_Jammu_and_Kashmir.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="kashmir.jpg">
+            </div>
+            <p>Mosaic Restaurant, jammu</p>
+        </section></a>
+
+        <a href="https://www.thefork.com/restaurant/gujrat-spice-restaurant-r826716" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="gujrat.jpg">
+            </div>
+            <p>Gujrat Spice Restaurant</p>
+        </section></a>
+    </section>
+    <section class="container">
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g303876-d9459019-Reviews-TFL-Vijayawada_Krishna_District_Andhra_Pradesh.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="andhra.jpg">
+            </div>
+            <p>TFL,Vijayawada</p>
+        </section></a>
+
+        <a href="https://www.thegranddragonladakh.com/dining.php" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="ladakh.png">
+            </div>
+            <p>The Grand Dragon Ladakh</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g816969-d1946644-Reviews-Simrose_Restaurant-Agonda_South_Goa_District_Goa.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="goa.png">
+            </div>
+            <p>Simrose Restaurant-Goa</p>
+        </section></a>
+
+        <a href="https://www.justdial.com/Bangalore/The-Rooftop-Restaurant-Koramangala/080PXX80-XX80-180630210414-E7S3_BZDET" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="karnataka.png">
+            </div>
+            <p>The Rooftop Restaurant- Bangalore</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g297635-d1205738-Reviews-Paragon_Restaurant_Calicut-Kozhikode_Kozhikode_District_Kerala.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="kerela.png">
+            </div>
+            <p>Paragon, Kozhikode- kerala</p>
+        </section></a>
+    
+        <a href="https://www.chokhapunjab.com/blogs/dhaba-near-me-savoring-authentic-punjabi-delights-at-chokha-punjab" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="punjab.png">
+            </div>
+            <p>Savoring Authentic Punjabi Delights</p>
+        </section></a>
+
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g304558-d4308093-Reviews-India_Restaurant-Kolkata_Calcutta_Kolkata_District_West_Bengal.html" target="_blank"><section class="rest">
+            <div class="imgforres">
+                <img src="bengal.jpg">
+            </div>
+            <p>India Restaurant, Kolkata</p>
         </section></a>
     </section>
 </body>
